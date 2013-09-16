@@ -1,15 +1,12 @@
 package yow2013.immutable;
 
-
-public class SimpleEvent
-{    
+public class SimpleEvent {
     private final long id;
     private final long v1;
     private final long v2;
     private final long v3;
 
-    public SimpleEvent(long id, long v1, long v2, long v3)
-    {
+    public SimpleEvent(long id, long v1, long v2, long v3) {
         this.id = id;
         this.v1 = v1;
         this.v2 = v2;

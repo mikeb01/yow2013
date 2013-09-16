@@ -12,7 +12,7 @@ public class CustomPerformanceTest
     
     public CustomPerformanceTest()
     {
-        ringBuffer = new CustomRingBuffer<>(new SingleProducerSequencer(1 << 20, new YieldingWaitStrategy()));
+        ringBuffer = new CustomRingBuffer<>(new SingleProducerSequencer(Constants.SIZE, new YieldingWaitStrategy()));
     }
     
     public void run()
@@ -34,8 +34,7 @@ public class CustomPerformanceTest
         Thread t = new Thread(batchEventProcessor);
         t.start();
         
-        long iterations = 1_000_000_000L;
-//        long iterations = 40L;
+        long iterations = Constants.ITERATIONS;
         for (long l = 0; l < iterations; l++)
         {
             SimpleEvent e = new SimpleEvent(l, l, l, l);
