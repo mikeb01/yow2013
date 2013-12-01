@@ -12,4 +12,9 @@ public class SimpleEvent {
         this.v2 = v2;
         this.v3 = v3;
     }
+    
+    public long getCounter()
+    {
+        return v1;
+    }
 }
